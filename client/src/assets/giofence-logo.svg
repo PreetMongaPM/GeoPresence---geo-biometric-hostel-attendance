@@ -1,0 +1,38 @@
+<svg viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="pinShadow">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+    <filter id="softBlur">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+    <filter id="areaGlow">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <ellipse cx="90" cy="132" rx="62" ry="16" fill="#000" opacity="0.07" filter="url(#softBlur)"/>
+
+  <g transform="translate(90,108) rotate(-8) scale(1, 0.52) translate(-90,-108)">
+    <path d="M52 78 C46 58 60 38 78 34 C92 30 108 36 118 48 C130 60 134 78 128 92 C122 106 108 116 94 118 C78 120 62 114 54 100 C48 90 56 94 52 78Z"
+          fill="#000" opacity="0.06" filter="url(#areaGlow)"/>
+    <path d="M52 78 C46 58 60 38 78 34 C92 30 108 36 118 48 C130 60 134 78 128 92 C122 106 108 116 94 118 C78 120 62 114 54 100 C48 90 56 94 52 78Z"
+          fill="none" stroke="#111" stroke-width="2.5" stroke-dasharray="7 4.5"
+          stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="78" cy="34" r="3.2" fill="#111"/>
+    <circle cx="118" cy="48" r="3.2" fill="#111"/>
+    <circle cx="128" cy="92" r="3.2" fill="#111"/>
+    <circle cx="94" cy="118" r="3.2" fill="#111"/>
+    <circle cx="54" cy="100" r="3.2" fill="#111"/>
+    <circle cx="52" cy="78" r="3.2" fill="#111"/>
+  </g>
+
+  <ellipse cx="91" cy="114" rx="11" ry="5" fill="#000" opacity="0.18" filter="url(#softBlur)"/>
+
+  <path d="M91 38 C78 38 67 49 67 62 C67 80 91 106 91 106 C91 106 115 80 115 62 C115 49 104 38 91 38Z"
+        fill="#111" filter="url(#pinShadow)"/>
+  <path d="M82 44 C78 49 76 56 76 62 C76 72 81 83 86 93 C82 83 79 73 79 62 C79 55 80 48 83 43Z"
+        fill="#fff" opacity="0.13"/>
+  <circle cx="91" cy="62" r="11" fill="white"/>
+  <circle cx="91" cy="62" r="5" fill="#111"/>
+</svg>

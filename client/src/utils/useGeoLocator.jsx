@@ -4,10 +4,12 @@ import hostelArea from '../features/geomap/geomap.json';
 
 const polygon = hostelArea.features[0];
 const bufferedArea = turf.buffer(polygon, 30, {units:'meters'});
+const lat = 30.764266999999997;
+const lng = 76.572029;
 
 const checkInside =  (lat, lng) => {
   const point = turf.point([lng, lat]);
-  const inside = turf.booleanPointInPolygon(point,bufferedArea );
+  const inside = turf.booleanPointInPolygon(point, bufferedArea);
   return inside;
 }
 const useGeoLocator = () => {
@@ -16,8 +18,9 @@ const useGeoLocator = () => {
   useEffect(()=>{
 
     navigator.geolocation.getCurrentPosition((pos) => {
-    const lat = pos.coords.latitude;
-    const lng = pos.coords.longitude;
+    // const lat = pos.coords.latitude;
+    // const lng = pos.coords.longitude;
+    // console.log(lat, lng);
     
     setIsStudentInside(checkInside(lat, lng));
     }, 
